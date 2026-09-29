@@ -20,7 +20,7 @@ export const App: React.FC = () => {
   // Simulated Telemetry generator / WebSocket consumer
   useEffect(() => {
     let ws: WebSocket | null = null;
-    let fallbackInterval: NodeJS.Timeout | null = null;
+    let fallbackInterval: ReturnType<typeof setInterval> | null = null;
     let stepCount = 0;
 
     const setupFallbackSimulation = () => {
